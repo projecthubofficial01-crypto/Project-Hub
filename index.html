@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Project Hub</title>
+
+<style>
+/* ===== GENERAL STYLES ===== */
+* {
+  margin: 0;    
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffe082;
+}
+
+/* ===== SECTION STYLES ===== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* ===== PROJECTS ===== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px;
+  padding: 0 20px;
+}
+
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.project-card .price {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ffe082;
+}
+
+.project-card button {
+  margin-top: 10px;
+  background: #ffe082;
+  color: #333;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-card button:hover {
+  background: #fff176;
+}
+
+/* ===== FACILITIES ===== */
+.facility-box {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* ===== PRICING ===== */
+.pricing-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.price-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+}
+
+.price-card h3 {
+  margin-bottom: 10px;
+}
+
+.price-card h4 {
+  color: #ffe082;
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.price-card ul {
+  list-style: none;
+  text-align: left;
+  margin: 10px 0 20px;
+}
+
+.price-card li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.price-card button {
+  background: #ffe082;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===== ABOUT / CONTACT ===== */
+.about, .contact {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.contact a {
+  display: inline-block;
+  margin: 10px;
+  color: #ffe082;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🚀 Project Hub</h1>
+  <p>We provide academic projects in Python, Java, Web Development, and more</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="#facilities">Facilities</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="projects">
+  <h2>Our Projects</h2>
+  <div class="projects-container" id="projectList"></div>
+</section>
+
+<section id="facilities">
+  <h2>Facilities We Provide</h2>
+  <div class="facility-box">
+    <p>✅ Project Source Code</p>
+    <p>📄 Project PDF Guide</p>
+    <p>💬 Gmail / WhatsApp Support</p>
+  </div>
+</section>
+
+<section id="pricing" class="pricing-section">
+  <h2>Our Pricing Plans</h2>
+  <div class="pricing-container">
+    <div class="price-card">
+      <h3>Basic Plan</h3>
+      <h4>₹199</h4>
+      <ul>
+        <li>One Mini Project</li>
+        <li>PDF Guide Included</li>
+      </ul>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">
+        Get Now
+      </button>
+    </div>
+
+    <div class="price-card">
+      <h3>Standard Plan</h3>
+      <h4>₹299</h4>
+      <ul>
+        <li>Project + PDF</li>
+        <li>WhatsApp Support</li>
+      </ul>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">
+        Get Now
+      </button>
+    </div>
+
+    <div class="price-card">
+      <h3>Premium Plan</h3>
+      <h4>₹499</h4>
+      <ul>
+        <li>Project + PDF + Live Setup Help</li>
+      </ul>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">
+        Get Now
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Project Hub</h2>
+  <div class="about">
+    <p>At Project Hub, We provide high-quality mini projects in  Python, Java, Web Development, and more. Each project comes with full documentation, code, and support — helping you learn and build confidently.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <a href="mailto:projecthubofficial01@gmail.com">✉ Gmail</a>
+    <a href="https://wa.me/">💬 WhatsApp</a>
+   
+  </div>
+</section>
+
+<footer>
+  © 2025 Project Hub | Designed with ❤ by Project Hub
+</footer>
+
+<script>
+// ===== PROJECTS DATA =====
+const projects = [
+  {
+    id: 'p1',
+    title: 'To_Do_List',
+    short: 'A simple Tkinter to-do list app that lets you add, delete, save, and load tasks locally with a clean GUI and task history(Python).',
+    price: '₹199',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
+  },
+  {
+    id: 'p2',
+    title: 'Offline Password Manager',
+    short: 'An offline password manager in Python securely stores and retrieves your passwords locally using encryption, without needing an internet connection (Python).',
+    price: '₹199',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
+  },
+  {
+    id: 'p3',
+    title: 'Expense Tracker System using Python',
+    short: 'An Expense Tracker in Python is a program that helps users record  categorize, and analyze their daily income and expenses to manage finances efficiently (Python).',
+    price: '₹199',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
+  },
+
+  {
+    id: 'p4',
+    title: ' Bank Management System',
+    short: 'The Bank Management System in Java is a console-based application that manages customer accounts, allowing users to create accounts deposit and withdraw money check balances, and view account details securely (Java).',
+    price: '₹199',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
+  },
+
+  {
+    id: 'p4',
+    title: ' Voice-to-Voice Translator',
+    short: 'A Voice-to-Voice Translator in Python is a project that listens to speech in one language, translates it into another language, and then speaks the translated output aloud (Python).',
+    price: '₹199',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
+  }
+];
+
+// ===== RENDER PROJECTS =====
+const projectList = document.getElementById("projectList");
+projects.forEach(p => {
+  projectList.innerHTML += `
+  <div class="project-card">
+    <h3>${p.title}</h3>
+    <p>${p.short}</p>
+    <div class="price">${p.price}</div>
+    <button onclick="window.open('${p.link}', '_blank')">Get Project</button>
+  </div>`;
+});
+</script>
+
+</body>
+</html>
