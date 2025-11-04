@@ -8,56 +8,62 @@
 <style>
 /* ===== GENERAL STYLES ===== */
 * {
-  margin: 0;    
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(120deg, #6a11cb, #2575fc);
-  color: #fff;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark gradient */
+  color: #f5f5f5;
   overflow-x: hidden;
 }
 
+/* ===== HEADER ===== */
 header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
+  background: #ffffff10;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
+  color: #00bcd4;
 }
 
 header p {
   margin-top: 10px;
   font-size: 1.1rem;
-  opacity: 0.9;
+  color: #d0d0d0;
 }
 
 /* ===== NAVBAR ===== */
 nav {
-  background: rgba(255, 255, 255, 0.1);
+  background: #121212;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 10px 0;
-  backdrop-filter: blur(8px);
+  gap: 25px;
+  padding: 12px 0;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #ffe082;
+  color: #00bcd4;
 }
 
 /* ===== SECTION STYLES ===== */
@@ -68,50 +74,51 @@ section {
 
 section h2 {
   font-size: 2rem;
-  margin-bottom: 30px;
-  color: #fff;
+  margin-bottom: 25px;
+  color: #00e5ff;
 }
 
 /* ===== PROJECTS ===== */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
   padding: 0 20px;
 }
 
-
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, #1c1c1c, #292929);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 15px;
-  padding: 20px;
-  transition: transform 0.3s, background 0.3s;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .project-card h3 {
+  color: #00bcd4;
   margin-bottom: 10px;
 }
 
 .project-card p {
+  color: #ddd;
   font-size: 0.95rem;
-  opacity: 0.9;
 }
 
 .project-card .price {
-  margin: 10px 0;
+  margin: 12px 0;
   font-weight: bold;
   color: #ffe082;
 }
 
 .project-card button {
-  margin-top: 10px;
-  background: #ffe082;
-  color: #333;
+  background: #00bcd4;
+  color: #fff;
   border: none;
   padding: 10px 18px;
   border-radius: 10px;
@@ -121,22 +128,25 @@ section h2 {
 }
 
 .project-card button:hover {
-  background: #fff176;
+  background: #00e5ff;
 }
 
 /* ===== FACILITIES ===== */
 .facility-box {
   max-width: 700px;
   margin: auto;
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff10;
   border-radius: 15px;
   padding: 20px;
   line-height: 1.6;
+  color: #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* ===== PRICING ===== */
 .pricing-section {
-  background: rgba(255, 255, 255, 0.1);
+  background: #2c5364;
+  color: #222;
   border-radius: 15px;
   max-width: 1000px;
   margin: auto;
@@ -150,9 +160,10 @@ section h2 {
 }
 
 .price-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: #ffffff;
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
@@ -161,11 +172,12 @@ section h2 {
 }
 
 .price-card h3 {
+  color: #00bcd4;
   margin-bottom: 10px;
 }
 
 .price-card h4 {
-  color: #ffe082;
+  color: #ff9800;
   font-size: 1.8rem;
   margin: 10px 0;
 }
@@ -182,8 +194,8 @@ section h2 {
 }
 
 .price-card button {
-  background: #ffe082;
-  color: #333;
+  background: #00bcd4;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
@@ -191,28 +203,70 @@ section h2 {
   font-weight: 600;
 }
 
+.price-card button:hover {
+  background: #0097a7;
+}
+
 /* ===== ABOUT / CONTACT ===== */
 .about, .contact {
   max-width: 800px;
   margin: auto;
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff10;
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
+  color: #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .contact a {
   display: inline-block;
   margin: 10px;
-  color: #ffe082;
+  color: #00bcd4;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+.contact a:hover {
+  color: #00e5ff;
+}
+
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.2);
-  margin-top: 40px;
+  background: #0a0a0a;
+  color: #aaa;
+  margin-top: 50px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 8px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .price-card h4 {
+    font-size: 1.5rem;
+  }
 }
 </style>
 </head>
@@ -290,7 +344,7 @@ footer {
 <section id="about">
   <h2>About Project Hub</h2>
   <div class="about">
-    <p>At Project Hub, We provide high-quality mini projects in  Python, Java, Web Development, and more. Each project comes with full documentation, code, and support — helping you learn and build confidently.</p>
+    <p>At Project Hub, we provide high-quality mini projects in Python, Java, Web Development, and more. Each project comes with full documentation, code, and support — helping you learn and build confidently.</p>
   </div>
 </section>
 
@@ -299,7 +353,6 @@ footer {
   <div class="contact">
     <a href="mailto:projecthubofficial01@gmail.com">✉ Gmail</a>
     <a href="https://whatsapp.com/channel/0029VbBLIbUJ3juqhBNzWx18/">💬 WhatsApp</a>
-   
   </div>
 </section>
 
@@ -308,48 +361,51 @@ footer {
 </footer>
 
 <script>
-// ===== PROJECTS DATA =====
 const projects = [
   {
     id: 'p1',
     title: 'To_Do_List',
-    short: 'A simple Tkinter to-do list app that lets you add, delete, save, and load tasks locally with a clean GUI and task history(Python).',
+    short: 'A simple Tkinter to-do list app that lets you add, delete, save, and load tasks locally with a clean GUI and task history (Python).',
     price: '₹199',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
   },
   {
     id: 'p2',
     title: 'Offline Password Manager',
-    short: 'An offline password manager in Python securely stores and retrieves your passwords locally using encryption, without needing an internet connection (Python).',
+    short: 'An offline password manager in Python securely stores and retrieves your passwords locally using encryption, without needing internet (Python).',
     price: '₹199',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
   },
   {
     id: 'p3',
-    title: 'Expense Tracker System using Python',
-    short: 'An Expense Tracker in Python is a program that helps users record  categorize, and analyze their daily income and expenses to manage finances efficiently (Python).',
+    title: 'Expense Tracker System',
+    short: 'An Expense Tracker in Python helps users record and analyze their daily income and expenses to manage finances efficiently (Python).',
     price: '₹199',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
   },
-
   {
     id: 'p4',
-    title: ' Bank Management System',
-    short: 'The Bank Management System in Java is a console-based application that manages customer accounts, allowing users to create accounts deposit and withdraw money check balances, and view account details securely (Java).',
+    title: 'Bank Management System',
+    short: 'A console-based Java app that manages customer accounts — create, deposit, withdraw, and view details securely (Java).',
     price: '₹199',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
   },
-
   {
-    id: 'p4',
-    title: ' Voice-to-Voice Translator',
-    short: 'A Voice-to-Voice Translator in Python is a project that listens to speech in one language, translates it into another language, and then speaks the translated output aloud (Python).',
+    id: 'p5',
+    title: 'Voice-to-Voice Translator',
+    short: 'A Voice-to-Voice Translator in Python that listens to speech, translates it into another language, and speaks it aloud (Python).',
+    price: '₹199',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
+  },
+  {
+    id: 'p6',
+    title: 'Resume Builder Web App',
+    short: 'Build a professional resume instantly using HTML, CSS, and JS — simple, responsive, and ready to download (Website).',
     price: '₹199',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
   }
 ];
 
-// ===== RENDER PROJECTS =====
 const projectList = document.getElementById("projectList");
 projects.forEach(p => {
   projectList.innerHTML += `
@@ -364,4 +420,3 @@ projects.forEach(p => {
 
 </body>
 </html>
-
