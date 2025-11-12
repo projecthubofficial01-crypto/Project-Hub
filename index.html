@@ -15,7 +15,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark gradient */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #f5f5f5;
   overflow-x: hidden;
 }
@@ -245,25 +245,20 @@ footer {
   header h1 {
     font-size: 2rem;
   }
-
   nav {
     flex-wrap: wrap;
     gap: 15px;
     padding: 8px;
   }
-
   nav a {
     font-size: 0.9rem;
   }
-
   section h2 {
     font-size: 1.6rem;
   }
-
   .project-card {
     padding: 18px;
   }
-
   .price-card h4 {
     font-size: 1.5rem;
   }
@@ -282,6 +277,7 @@ footer {
   <a href="#home">Home</a>
   <a href="#projects">Projects</a>
   <a href="#facilities">Facilities</a>
+  <a href="#custom">Custom Project</a>
   <a href="#pricing">Pricing</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
@@ -301,6 +297,24 @@ footer {
   </div>
 </section>
 
+<!-- 🌟 CUSTOM MINI PROJECT DEVELOPMENT SECTION -->
+<section id="custom">
+  <h2>Custom Mini Project Development</h2>
+  <div class="facility-box">
+    <p>🎯 Don’t find the project you’re looking for? Get your own idea built by our team!</p>
+    <p>💡 We create personalized mini projects in <b>Python, Machine Learning, AI, Web Development, Java, IoT</b> and more — completely based on your topic and requirements.</p>
+    <p>📄 You’ll receive: Source Code + Report + PPT + Setup Guide</p>
+    <p>💬 Delivery via Gmail / WhatsApp</p>
+    <br>
+    <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdx1gj8cDdb8r3fIhOJhQyzffEJMzPnZ0rydeICTpS7OWkQug/viewform?usp=header', '_blank')" 
+      style="background:#00bcd4;color:#fff;border:none;padding:12px 22px;
+      border-radius:10px;cursor:pointer;font-weight:600;">
+      🚀 Request Custom Project
+    </button>
+  </div>
+</section>
+<!-- 🌟 END CUSTOM MINI PROJECT DEVELOPMENT SECTION -->
+
 <section id="pricing" class="pricing-section">
   <h2>Our Pricing Plans</h2>
   <div class="pricing-container">
@@ -311,9 +325,7 @@ footer {
         <li>One Mini Project</li>
         <li>PDF Guide Included</li>
       </ul>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">
-        Get Now
-      </button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">Get Now</button>
     </div>
 
     <div class="price-card">
@@ -323,9 +335,7 @@ footer {
         <li>Project + PDF</li>
         <li>WhatsApp Support</li>
       </ul>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">
-        Get Now
-      </button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">Get Now</button>
     </div>
 
     <div class="price-card">
@@ -334,9 +344,7 @@ footer {
       <ul>
         <li>Project + PDF + Live Setup Help</li>
       </ul>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">
-        Get Now
-      </button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header', '_blank')">Get Now</button>
     </div>
   </div>
 </section>
@@ -406,8 +414,8 @@ const projects = [
   },
   {
     id: 'p7',
-    title: ' Weather  App',
-    short: 'You can easily check real-time temperature, humidity, and weather conditions of any city with a simple, clean interface (Website)',
+    title: 'Weather App',
+    short: 'Check real-time temperature, humidity, and weather conditions of any city with a clean interface (Website).',
     price: '₹199',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSen6lvUG6pEeSZqr-MpCOTYAsZpj9K61YdkcNsAI-cAO_jYHA/viewform?usp=header'
   }
